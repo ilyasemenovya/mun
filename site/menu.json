@@ -1,0 +1,1271 @@
+{
+  "kitchen": [
+    {
+      "name": "Закуски",
+      "items": [
+        {
+          "name": "Тартар из говядины",
+          "volume": "230 г",
+          "price": 560
+        },
+        {
+          "name": "Брускетта с лососем",
+          "volume": "186 г",
+          "price": 760
+        },
+        {
+          "name": "Брускетта с ростбифом",
+          "volume": "186 г",
+          "price": 680
+        },
+        {
+          "name": "Сырная тарелка",
+          "volume": "440 г",
+          "price": 800
+        },
+        {
+          "name": "Пивной сет",
+          "volume": "820 г",
+          "price": 1100
+        },
+        {
+          "name": "Сет под крепкий",
+          "volume": "515 г",
+          "price": 770
+        },
+        {
+          "name": "Чесночные гренки",
+          "volume": "190 г",
+          "price": 250
+        },
+        {
+          "name": "Креветки темпура",
+          "volume": "180 г",
+          "price": 760
+        },
+        {
+          "name": "Сырные палочки",
+          "volume": "195 г",
+          "price": 380
+        },
+        {
+          "name": "Хумус с томатами и песто",
+          "volume": "280 г",
+          "price": 370
+        }
+      ]
+    },
+    {
+      "name": "Салаты",
+      "items": [
+        {
+          "name": "Греческий",
+          "volume": "240 г",
+          "price": 550
+        },
+        {
+          "name": "Цезарь с цыплёнком",
+          "volume": "220 г",
+          "price": 440
+        },
+        {
+          "name": "Цезарь с креветками",
+          "volume": "210 г",
+          "price": 590
+        },
+        {
+          "name": "Нисуаз",
+          "volume": "200 г",
+          "price": 680
+        },
+        {
+          "name": "Салат с лососем",
+          "volume": "180 г",
+          "price": 790
+        },
+        {
+          "name": "Смесь вкусов",
+          "volume": "190 г",
+          "price": 650
+        },
+        {
+          "name": "Салат с морепродуктами",
+          "volume": "260 г",
+          "price": 690
+        },
+        {
+          "name": "С обжаренными баклажанами",
+          "volume": "235 г",
+          "price": 350
+        },
+        {
+          "name": "С креветками и манго",
+          "volume": "200 г",
+          "price": 720
+        }
+      ]
+    },
+    {
+      "name": "Супы",
+      "items": [
+        {
+          "name": "Том ям",
+          "volume": "590 г",
+          "price": 870
+        },
+        {
+          "name": "Куриный бульон",
+          "volume": "440 г",
+          "price": 360
+        },
+        {
+          "name": "Борщ",
+          "volume": "490 г",
+          "price": 410
+        },
+        {
+          "name": "Фо бо",
+          "volume": "590 г",
+          "price": 560
+        },
+        {
+          "name": "Уха по-фински",
+          "volume": "490 г",
+          "price": 640
+        }
+      ]
+    },
+    {
+      "name": "Поке",
+      "items": [
+        {
+          "name": "Лосось",
+          "volume": "310 г",
+          "price": 640
+        },
+        {
+          "name": "Тунец",
+          "volume": "300 г",
+          "price": 610
+        },
+        {
+          "name": "Креветка",
+          "volume": "280 г",
+          "price": 550
+        },
+        {
+          "name": "Курица",
+          "volume": "310 г",
+          "price": 410
+        }
+      ]
+    },
+    {
+      "name": "Горячее",
+      "items": [
+        {
+          "name": "Миньон",
+          "volume": "",
+          "price": 1850
+        },
+        {
+          "name": "Говяжьи щёчки с картофельным пюре",
+          "volume": "275 г",
+          "price": 720
+        },
+        {
+          "name": "Бефстроганов с пюре",
+          "volume": "300 г",
+          "price": 750
+        },
+        {
+          "name": "Судак",
+          "volume": "275 г",
+          "price": 660
+        },
+        {
+          "name": "Рёбра",
+          "volume": "630 г",
+          "price": 970
+        },
+        {
+          "name": "Куриное филе",
+          "volume": "385 г",
+          "price": 540
+        },
+        {
+          "name": "Картошка жареная с грибами",
+          "volume": "240 г",
+          "price": 450
+        },
+        {
+          "name": "Сырный бифштекс",
+          "volume": "275 г",
+          "price": 660
+        }
+      ]
+    },
+    {
+      "name": "Пасты",
+      "items": [
+        {
+          "name": "Карбонара",
+          "volume": "215 г",
+          "price": 490
+        },
+        {
+          "name": "С креветками",
+          "volume": "225 г",
+          "price": 620
+        },
+        {
+          "name": "С курицей и грибами",
+          "volume": "260 г",
+          "price": 530
+        }
+      ]
+    },
+    {
+      "name": "Бургеры",
+      "items": [
+        {
+          "name": "С курицей",
+          "volume": "450 г",
+          "price": 530
+        },
+        {
+          "name": "С говядиной",
+          "volume": "455 г",
+          "price": 710
+        },
+        {
+          "name": "С креветками",
+          "volume": "235 г",
+          "price": 550
+        },
+        {
+          "name": "Картофельные вафли",
+          "volume": "220 г",
+          "price": 560
+        }
+      ]
+    },
+    {
+      "name": "Десерты",
+      "items": [
+        {
+          "name": "Фондан",
+          "volume": "160 г",
+          "price": 490
+        },
+        {
+          "name": "Штрудель",
+          "volume": "220 г",
+          "price": 370
+        },
+        {
+          "name": "Чизкейк",
+          "volume": "190 г",
+          "price": 400
+        },
+        {
+          "name": "Бельгийские вафли",
+          "volume": "195 г",
+          "price": 290
+        },
+        {
+          "name": "Мороженое",
+          "volume": "70 г",
+          "price": 150
+        },
+        {
+          "name": "Сырники с голубикой",
+          "volume": "200 г",
+          "price": 410
+        }
+      ]
+    }
+  ],
+  "bar": [
+    {
+      "name": "Игристые вина",
+      "items": [
+        {
+          "name": "Melangeri бел.п/слад",
+          "volume": "0,75",
+          "price": 1200
+        },
+        {
+          "name": "Chateau Tamagne Select Blanc бел.брют",
+          "volume": "0,75",
+          "price": 1500
+        },
+        {
+          "name": "Asti Frettino бел. слад",
+          "volume": "0,75",
+          "price": 2400
+        },
+        {
+          "name": "Fonte Prosecco бел.брют",
+          "volume": "0,75",
+          "price": 2700
+        },
+        {
+          "name": "Martini Brut бел.брют",
+          "volume": "0,75",
+          "price": 2800
+        }
+      ]
+    },
+    {
+      "name": "Красные вина",
+      "items": [
+        {
+          "name": "Cabernet Franc, High Roof сух",
+          "volume": "0,75",
+          "price": 1300
+        },
+        {
+          "name": "Aristov Anima Miscela сух",
+          "volume": "0,75",
+          "price": 1600
+        },
+        {
+          "name": "Shiraz, Afrikaa Park сух",
+          "volume": "0,75",
+          "price": 1900
+        },
+        {
+          "name": "Malbec, Los Pasos сух",
+          "volume": "0,75",
+          "price": 2200
+        },
+        {
+          "name": "Киндзмараули Палавани п/слад",
+          "volume": "0,75",
+          "price": 2300
+        },
+        {
+          "name": "Chianti Geografico сух",
+          "volume": "0,75",
+          "price": 2800
+        },
+        {
+          "name": "Zinfandel, Pavo Nero Puglia",
+          "volume": "0,75",
+          "price": 2800
+        }
+      ]
+    },
+    {
+      "name": "Белые вина",
+      "items": [
+        {
+          "name": "Рислинг, Высокий Берег п/сух",
+          "volume": "0,75",
+          "price": 1500
+        },
+        {
+          "name": "Алазанская долина Палавани п/слад",
+          "volume": "0,75",
+          "price": 1800
+        },
+        {
+          "name": "Sauvignon Blanc, Curicano сух",
+          "volume": "0,75",
+          "price": 1800
+        },
+        {
+          "name": "Pinot Grigio, Meravigliosa сух",
+          "volume": "0,75",
+          "price": 1900
+        },
+        {
+          "name": "Chardonnay, Aresti Cabina 56 Reserva сух",
+          "volume": "0,75",
+          "price": 2400
+        },
+        {
+          "name": "Riesling, River Route Rheinhessen п/сух",
+          "volume": "0,75",
+          "price": 2900
+        },
+        {
+          "name": "Sauvignon Blanc, Willowbank Marlborough п/сух",
+          "volume": "0,75",
+          "price": 3200
+        }
+      ]
+    },
+    {
+      "name": "Розовые вина",
+      "items": [
+        {
+          "name": "Chateau Tamagne Par la Mer Corail",
+          "volume": "0,75",
+          "price": 1600
+        }
+      ]
+    },
+    {
+      "name": "Плодовое вино",
+      "items": [
+        {
+          "name": "Гранатовое, Армениан Гарден",
+          "volume": "0,75",
+          "price": 1900
+        }
+      ]
+    },
+    {
+      "name": "Вина по бокалам",
+      "items": [
+        {
+          "name": "Cabernet Franc, High Roof крс. сух",
+          "volume": "0,15",
+          "price": 280
+        },
+        {
+          "name": "Malbec, Los Pasos крас. сух",
+          "volume": "0,15",
+          "price": 450
+        },
+        {
+          "name": "Киндзмараули Палавани крас.п/слад",
+          "volume": "0,15",
+          "price": 470
+        },
+        {
+          "name": "Рислинг, Высокий Берег бел.п/сух",
+          "volume": "0,15",
+          "price": 320
+        },
+        {
+          "name": "Алазанская долина Палавани бел.п/слад",
+          "volume": "0,15",
+          "price": 370
+        },
+        {
+          "name": "Pinot Grigio, Meravigliosa бел. сух",
+          "volume": "0,15",
+          "price": 390
+        }
+      ]
+    },
+    {
+      "name": "Водка",
+      "items": [
+        {
+          "name": "Эрех Премиум",
+          "volume": "0,5 л",
+          "price": 1700
+        },
+        {
+          "name": "Эрех Премиум",
+          "volume": "40 мл",
+          "price": 140
+        },
+        {
+          "name": "Царская Оригинальная",
+          "volume": "0,5 л",
+          "price": 1900
+        },
+        {
+          "name": "Царская Оригинальная",
+          "volume": "40 мл",
+          "price": 160
+        },
+        {
+          "name": "Чайковский",
+          "volume": "0,5 л",
+          "price": 2200
+        },
+        {
+          "name": "Чайковский",
+          "volume": "40 мл",
+          "price": 180
+        },
+        {
+          "name": "Absolut",
+          "volume": "0,5 л",
+          "price": 3800
+        },
+        {
+          "name": "Absolut",
+          "volume": "40 мл",
+          "price": 300
+        },
+        {
+          "name": "Чистые Росы",
+          "volume": "0,5 л",
+          "price": 4000
+        },
+        {
+          "name": "Чистые Росы",
+          "volume": "40 мл",
+          "price": 320
+        }
+      ]
+    },
+    {
+      "name": "Виски",
+      "items": [
+        {
+          "name": "Tavern Hound Appple",
+          "volume": "0,5 л",
+          "price": 1600
+        },
+        {
+          "name": "Tavern Hound Appple",
+          "volume": "40 мл",
+          "price": 140
+        },
+        {
+          "name": "Tavern Hound",
+          "volume": "0,5 л",
+          "price": 1700
+        },
+        {
+          "name": "Tavern Hound",
+          "volume": "40 мл",
+          "price": 150
+        },
+        {
+          "name": "William Lawson's",
+          "volume": "0,7 л",
+          "price": 4200
+        },
+        {
+          "name": "William Lawson's",
+          "volume": "40 мл",
+          "price": 250
+        },
+        {
+          "name": "Dewar's White Lable",
+          "volume": "0,7 л",
+          "price": 4900
+        },
+        {
+          "name": "Dewar's White Lable",
+          "volume": "40 мл",
+          "price": 300
+        },
+        {
+          "name": "Ballantines",
+          "volume": "0,7 л",
+          "price": 4800
+        },
+        {
+          "name": "Ballantines",
+          "volume": "40 мл",
+          "price": 320
+        },
+        {
+          "name": "Jameson",
+          "volume": "0,7 л",
+          "price": 5300
+        },
+        {
+          "name": "Jameson",
+          "volume": "40 мл",
+          "price": 350
+        },
+        {
+          "name": "Jack Daniel's",
+          "volume": "0,7 л",
+          "price": 5900
+        },
+        {
+          "name": "Jack Daniel's",
+          "volume": "40 мл",
+          "price": 380
+        },
+        {
+          "name": "Chivas Regal 12",
+          "volume": "0,7 л",
+          "price": 6900
+        },
+        {
+          "name": "Chivas Regal 12",
+          "volume": "40 мл",
+          "price": 410
+        }
+      ]
+    },
+    {
+      "name": "Ром",
+      "items": [
+        {
+          "name": "Oakheart Original",
+          "volume": "0,7 л",
+          "price": 3900
+        },
+        {
+          "name": "Oakheart Original",
+          "volume": "40 мл",
+          "price": 230
+        },
+        {
+          "name": "Barcelo Blanco",
+          "volume": "0,7 л",
+          "price": 3400
+        },
+        {
+          "name": "Barcelo Blanco",
+          "volume": "40 мл",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "name": "Джин",
+      "items": [
+        {
+          "name": "Barrister Pink",
+          "volume": "0,7 л",
+          "price": 2500
+        },
+        {
+          "name": "Barrister Pink",
+          "volume": "40 мл",
+          "price": 160
+        },
+        {
+          "name": "Bosford",
+          "volume": "0,5 л",
+          "price": 2400
+        },
+        {
+          "name": "Bosford",
+          "volume": "40 мл",
+          "price": 210
+        },
+        {
+          "name": "Bulldog London Dry",
+          "volume": "0,7",
+          "price": 6100
+        },
+        {
+          "name": "Bulldog London Dry",
+          "volume": "40 мл",
+          "price": 370
+        }
+      ]
+    },
+    {
+      "name": "Текила",
+      "items": [
+        {
+          "name": "Rancho Alegre Gold",
+          "volume": "0,7 л",
+          "price": 4900
+        },
+        {
+          "name": "Rancho Alegre Gold",
+          "volume": "40 мл",
+          "price": 290
+        },
+        {
+          "name": "Olmeca Blanco",
+          "volume": "0,7 л",
+          "price": 5900
+        },
+        {
+          "name": "Olmeca Blanco",
+          "volume": "40 мл",
+          "price": 330
+        },
+        {
+          "name": "Espolon Blanco",
+          "volume": "0,75 л",
+          "price": 6500
+        },
+        {
+          "name": "Espolon Blanco",
+          "volume": "40 мл",
+          "price": 390
+        }
+      ]
+    },
+    {
+      "name": "Коньяк и бренди",
+      "items": [
+        {
+          "name": "Ной традиционный 3*",
+          "volume": "0,5 л",
+          "price": 2500
+        },
+        {
+          "name": "Ной традиционный 3*",
+          "volume": "40 мл",
+          "price": 220
+        },
+        {
+          "name": "Ararat 5 лет",
+          "volume": "0,5 л",
+          "price": 4100
+        },
+        {
+          "name": "Ararat 5 лет",
+          "volume": "40 мл",
+          "price": 350
+        },
+        {
+          "name": "Courvoisier VS",
+          "volume": "0,7 л",
+          "price": 7500
+        },
+        {
+          "name": "Courvoisier VS",
+          "volume": "40 мл",
+          "price": 430
+        }
+      ]
+    },
+    {
+      "name": "Аперитивы и дижестивы",
+      "items": [
+        {
+          "name": "Martini Bainco",
+          "volume": "1 л",
+          "price": 3800
+        },
+        {
+          "name": "Martini Bainco",
+          "volume": "80 мл",
+          "price": 300
+        },
+        {
+          "name": "Martini Fierro",
+          "volume": "1 л",
+          "price": 3800
+        },
+        {
+          "name": "Martini Fierro",
+          "volume": "80 мл",
+          "price": 300
+        },
+        {
+          "name": "Beluga Hunting Berry 0,5",
+          "volume": "0,5 л",
+          "price": 2000
+        },
+        {
+          "name": "Beluga Hunting Berry 0,5",
+          "volume": "40 мл",
+          "price": 180
+        },
+        {
+          "name": "Jagermeister 0,7",
+          "volume": "0,7 л",
+          "price": 4800
+        },
+        {
+          "name": "Jagermeister 0,7",
+          "volume": "40 мл",
+          "price": 290
+        }
+      ]
+    },
+    {
+      "name": "Домашние настойки",
+      "items": [
+        {
+          "name": "Лимончелло",
+          "volume": "0,5 л",
+          "price": 2000
+        },
+        {
+          "name": "Лимончелло",
+          "volume": "40 мл",
+          "price": 170
+        },
+        {
+          "name": "Бородинская с чесноком",
+          "volume": "0,5 л",
+          "price": 2000
+        },
+        {
+          "name": "Бородинская с чесноком",
+          "volume": "40 мл",
+          "price": 170
+        },
+        {
+          "name": "Смородина",
+          "volume": "0,5 л",
+          "price": 2000
+        },
+        {
+          "name": "Смородина",
+          "volume": "40 мл",
+          "price": 170
+        },
+        {
+          "name": "Вишня",
+          "volume": "0,5 л",
+          "price": 2000
+        },
+        {
+          "name": "Вишня",
+          "volume": "40 мл",
+          "price": 170
+        },
+        {
+          "name": "Маракуйя-ваниль",
+          "volume": "0,5 л",
+          "price": 2000
+        },
+        {
+          "name": "Маракуйя-ваниль",
+          "volume": "40 мл",
+          "price": 170
+        },
+        {
+          "name": "Малина",
+          "volume": "0,5 л",
+          "price": 2000
+        },
+        {
+          "name": "Малина",
+          "volume": "40 мл",
+          "price": 170
+        }
+      ]
+    },
+    {
+      "name": "Пиво розливное",
+      "items": [
+        {
+          "name": "Светлое",
+          "volume": "0,5 л",
+          "price": 190
+        },
+        {
+          "name": "Нефильтрованное",
+          "volume": "0,5 л",
+          "price": 190
+        },
+        {
+          "name": "Темное",
+          "volume": "0,5 л",
+          "price": 190
+        },
+        {
+          "name": "Сакура Вишневая",
+          "volume": "0,5 л",
+          "price": 250
+        }
+      ]
+    },
+    {
+      "name": "Бутылочное пиво",
+      "items": [
+        {
+          "name": "Zatecky Gus Temny",
+          "volume": "0,45 л",
+          "price": 250
+        },
+        {
+          "name": "Балтика Brew IPA",
+          "volume": "0,44 л",
+          "price": 330
+        },
+        {
+          "name": "Балтика Brew Kriek",
+          "volume": "0,44 л",
+          "price": 330
+        },
+        {
+          "name": "Spaten",
+          "volume": "0,45 л",
+          "price": 320
+        },
+        {
+          "name": "Corona Extra",
+          "volume": "0,33 л",
+          "price": 370
+        },
+        {
+          "name": "Tsingtao",
+          "volume": "0,5 л",
+          "price": 380
+        },
+        {
+          "name": "Зависимость",
+          "volume": "0,5 л",
+          "price": 390
+        },
+        {
+          "name": "Bud б/а",
+          "volume": "0,33 л",
+          "price": 180
+        },
+        {
+          "name": "Tsingtao б/a",
+          "volume": "0,33 л",
+          "price": 320
+        }
+      ]
+    },
+    {
+      "name": "Черный чай",
+      "items": [
+        {
+          "name": "Ассам",
+          "volume": "0,8 л",
+          "price": 220
+        },
+        {
+          "name": "Эрл грей",
+          "volume": "0,8 л",
+          "price": 220
+        },
+        {
+          "name": "Чабрец",
+          "volume": "0,8 л",
+          "price": 220
+        },
+        {
+          "name": "Иван-чай",
+          "volume": "0,8 л",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "name": "Зеленый чай",
+      "items": [
+        {
+          "name": "Сенча",
+          "volume": "0,8 л",
+          "price": 220
+        },
+        {
+          "name": "Жасмин",
+          "volume": "0,8 л",
+          "price": 220
+        },
+        {
+          "name": "Молочный улун",
+          "volume": "0,8 л",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "name": "Фирменный чай",
+      "items": [
+        {
+          "name": "Облепиха-имбирь",
+          "volume": "0,8 л",
+          "price": 420
+        },
+        {
+          "name": "Шиповник-смородина",
+          "volume": "0,8 л",
+          "price": 420
+        }
+      ]
+    },
+    {
+      "name": "Кофе",
+      "items": [
+        {
+          "name": "Эспрессо",
+          "volume": "40 мл",
+          "price": 150
+        },
+        {
+          "name": "Американо",
+          "volume": "180 мл",
+          "price": 150
+        },
+        {
+          "name": "Капучино",
+          "volume": "200 мл",
+          "price": 200
+        },
+        {
+          "name": "Латте",
+          "volume": "250 мл",
+          "price": 200
+        },
+        {
+          "name": "Бамбл",
+          "volume": "300 мл",
+          "price": 300
+        },
+        {
+          "name": "Эспрессо Тоник",
+          "volume": "300 мл",
+          "price": 300
+        }
+      ]
+    },
+    {
+      "name": "Лимонады",
+      "items": [
+        {
+          "name": "Каламанси-мандарин",
+          "volume": "1 л",
+          "price": 440
+        },
+        {
+          "name": "Каламанси-мандарин",
+          "volume": "0,4 л",
+          "price": 220
+        },
+        {
+          "name": "Лайм-клубника-малина",
+          "volume": "1 л",
+          "price": 440
+        },
+        {
+          "name": "Лайм-клубника-малина",
+          "volume": "0,4 л",
+          "price": 220
+        },
+        {
+          "name": "Фейхоа-ежевика",
+          "volume": "1 л",
+          "price": 440
+        },
+        {
+          "name": "Фейхоа-ежевика",
+          "volume": "0,4 л",
+          "price": 220
+        },
+        {
+          "name": "Груша-манго-маракуйя",
+          "volume": "1 л",
+          "price": 440
+        },
+        {
+          "name": "Груша-манго-маракуйя",
+          "volume": "0,4 л",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "name": "Безалкогольные коктейли",
+      "items": [
+        {
+          "name": "Aperol Spritz",
+          "volume": "220 мл",
+          "price": 420
+        },
+        {
+          "name": "Bellini",
+          "volume": "180 мл",
+          "price": 370
+        },
+        {
+          "name": "Mai Tai",
+          "volume": "190 мл",
+          "price": 400
+        }
+      ]
+    },
+    {
+      "name": "Фреши",
+      "items": [
+        {
+          "name": "Морковный со сливками",
+          "volume": "200 мл",
+          "price": 250
+        },
+        {
+          "name": "Апельсиновый",
+          "volume": "200 мл",
+          "price": 250
+        },
+        {
+          "name": "Грейпфрутовый",
+          "volume": "200 мл",
+          "price": 300
+        },
+        {
+          "name": "Яблоко-грейпфрут",
+          "volume": "200 мл",
+          "price": 250
+        }
+      ]
+    },
+    {
+      "name": "Безалкогольные напитки",
+      "items": [
+        {
+          "name": "Coca-Cola",
+          "volume": "0,33 л",
+          "price": 280
+        },
+        {
+          "name": "Добрый Лимон-лайм",
+          "volume": "0,33 л",
+          "price": 240
+        },
+        {
+          "name": "Добрый Кола",
+          "volume": "0,5",
+          "price": 200
+        },
+        {
+          "name": "Добрый Кола",
+          "volume": "1 л",
+          "price": 300
+        },
+        {
+          "name": "Тоник Rich",
+          "volume": "0,33 л",
+          "price": 180
+        },
+        {
+          "name": "Red Bull",
+          "volume": "0,25 л",
+          "price": 280
+        },
+        {
+          "name": "Bon Aqua с газом/без газа",
+          "volume": "0,5 л",
+          "price": 120
+        },
+        {
+          "name": "Rich (апельсин, вишня, яблоко)",
+          "volume": "0,2 л",
+          "price": 110
+        },
+        {
+          "name": "Rich (апельсин, вишня, яблоко томат)",
+          "volume": "1л",
+          "price": 450
+        }
+      ]
+    },
+    {
+      "name": "Коктейли",
+      "items": [
+        {
+          "name": "Aperol Spritz",
+          "volume": "180 мл",
+          "price": 450
+        },
+        {
+          "name": "Campari Spritz",
+          "volume": "180 мл",
+          "price": 450
+        },
+        {
+          "name": "Sarti Spritz",
+          "volume": "180 мл",
+          "price": 450
+        },
+        {
+          "name": "Сет из трех коктейлей Spritz",
+          "volume": "540 мл",
+          "price": 1200
+        },
+        {
+          "name": "Negroni",
+          "volume": "90 мл",
+          "price": 550
+        },
+        {
+          "name": "Porn Star Martini",
+          "volume": "155 мл",
+          "price": 450
+        },
+        {
+          "name": "Martini Fiero & Tonic",
+          "volume": "200 мл",
+          "price": 400
+        },
+        {
+          "name": "Сosmopolitan",
+          "volume": "150 мл",
+          "price": 400
+        },
+        {
+          "name": "French 75",
+          "volume": "160 мл",
+          "price": 450
+        },
+        {
+          "name": "Long Island",
+          "volume": "305 мл",
+          "price": 550
+        },
+        {
+          "name": "Aperetivo Spritz",
+          "volume": "200 мл",
+          "price": 400
+        },
+        {
+          "name": "Clover Club",
+          "volume": "100 мл",
+          "price": 450
+        },
+        {
+          "name": "Bellini",
+          "volume": "150 мл",
+          "price": 450
+        },
+        {
+          "name": "Fiesta",
+          "volume": "165 мл",
+          "price": 450
+        },
+        {
+          "name": "Green Sunset",
+          "volume": "155 мл",
+          "price": 520
+        },
+        {
+          "name": "Coco Lady",
+          "volume": "200 мл",
+          "price": 540
+        },
+        {
+          "name": "Apple Sour",
+          "volume": "90 мл",
+          "price": 350
+        },
+        {
+          "name": "Apple Tonic",
+          "volume": "210 мл",
+          "price": 350
+        },
+        {
+          "name": "Cuba Libre",
+          "volume": "200 мл",
+          "price": 350
+        },
+        {
+          "name": "Whiskey & Cola",
+          "volume": "200 мл",
+          "price": 350
+        },
+        {
+          "name": "Gin & Tonic",
+          "volume": "200 мл",
+          "price": 350
+        }
+      ]
+    },
+    {
+      "name": "Горячие коктейли",
+      "items": [
+        {
+          "name": "Глинтвейн",
+          "volume": "300 мл",
+          "price": 300
+        },
+        {
+          "name": "Глинтвейн безалкогольный",
+          "volume": "300 мл",
+          "price": 250
+        }
+      ]
+    }
+  ]
+}
