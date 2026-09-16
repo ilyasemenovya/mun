@@ -3,6 +3,13 @@ export const GRAVITY = 1950;
 export const JUMP_VELOCITY = 800;
 export const PLAYER_HALF_WIDTH = 12;
 
+const OBSTACLES = [
+  { type: 'table', minWidth: 90, widthRange: 21, height: 54 },
+  { type: 'chair', minWidth: 42, widthRange: 11, height: 72 },
+  { type: 'ribs', minWidth: 84, widthRange: 19, height: 38 },
+  { type: 'burger', minWidth: 58, widthRange: 15, height: 54 }
+];
+
 export function randomFromSeed(seed) {
   let value = seed >>> 0;
   return () => {
@@ -82,11 +89,10 @@ export class LunarRun {
 
     this.nextObstacle -= move;
     if (this.nextObstacle <= 0) {
-      const type = this.random() < 0.5 ? 'table' : 'chair';
-      const width = type === 'table' ? 90 + Math.floor(this.random() * 21) : 42 + Math.floor(this.random() * 11);
-      const height = type === 'table' ? 54 : 72;
+      const { type, minWidth, widthRange, height } = OBSTACLES[Math.floor(this.random() * OBSTACLES.length)];
+      const width = minWidth + Math.floor(this.random() * widthRange);
       this.obstacles.push({ type, x: this.width + 65, width, height, passed: false });
-      // Leave enough time to land before the next piece of furniture arrives.
+      // Leave enough time to land before the next obstacle arrives.
       this.nextObstacle = width + this.speed * (1.12 + this.random() * 0.3);
     }
 

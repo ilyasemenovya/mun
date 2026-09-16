@@ -1,4 +1,5 @@
-import { LunarRun } from './game-core.mjs';
+import { LunarRun } from './game-core.mjs?v=20260916-food';
+import { drawFood } from './game-food.mjs?v=20260916-food';
 
 const $ = selector => document.querySelector(selector);
 const canvas = $('#canvas');
@@ -71,7 +72,7 @@ async function loadAssets() {
     assets = { waiter, moon, frames, helmet };
     $('#overlay-kicker').textContent = 'На низком старте';
     $('#overlay-title').textContent = 'Луна ждёт.';
-    $('#overlay-description').textContent = 'Официант с пивом на Луне. Перепрыгивайте столы и стулья, чтобы набрать больше очков.';
+    $('#overlay-description').textContent = 'Официант с пивом на Луне. Перепрыгивайте столы, стулья, рёбра и бургеры — по +25 очков за каждый удачный прыжок.';
     play.textContent = 'Начать пробежку';
   } catch {
     loadFailed = true;
@@ -118,7 +119,7 @@ function drawBackground() {
   context.fillRect(0, GROUND, run.width, 3);
 }
 
-function drawFurniture(obstacle) {
+function drawObstacle(obstacle) {
   const x = Math.round(obstacle.x);
   const y = GROUND - obstacle.height;
   const width = obstacle.width;
@@ -141,7 +142,7 @@ function drawFurniture(obstacle) {
     context.fillRect(x, y, width, 3);
     context.fillStyle = '#84412c';
     context.fillRect(x + 3, y + 10, width - 6, 5);
-  } else {
+  } else if (obstacle.type === 'chair') {
     context.fillStyle = '#684435';
     context.fillRect(x + 3, y, 8, obstacle.height);
     context.fillRect(x + width - 11, y + 38, 8, obstacle.height - 38);
@@ -158,6 +159,8 @@ function drawFurniture(obstacle) {
     context.fillRect(x, y + 33, width, 3);
     context.fillStyle = '#8e3529';
     context.fillRect(x + 5, GROUND - 16, width - 11, 5);
+  } else {
+    drawFood(context, obstacle, GROUND);
   }
 }
 
@@ -208,7 +211,7 @@ function render() {
   context.imageSmoothingEnabled = false;
   if (!assets) return;
   drawBackground();
-  run.obstacles.forEach(drawFurniture);
+  run.obstacles.forEach(drawObstacle);
   drawWaiter();
 }
 
@@ -265,7 +268,7 @@ function finishRun() {
   setPlaying(false);
   $('#overlay-kicker').textContent = isBest ? 'Новый личный рекорд' : 'Это была хорошая пробежка';
   $('#overlay-title').textContent = 'Ещё один шаг?';
-  $('#overlay-description').textContent = isBest ? 'На этом устройстве вы ещё не забирались так далеко.' : 'Попробуйте перепрыгнуть следующий стол или стул.';
+  $('#overlay-description').textContent = isBest ? 'На этом устройстве вы ещё не забирались так далеко.' : 'Столы, стулья, рёбра и бургеры — перепрыгивайте их и набирайте очки.';
   $('#run-result').textContent = `${run.score.toLocaleString('ru-RU')} очков`;
   $('#run-result').hidden = false;
   play.textContent = 'Ещё попытка';

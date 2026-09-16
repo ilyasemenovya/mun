@@ -59,7 +59,8 @@ test('passed furniture earns its bonus exactly once', () => {
   assert.equal(game.score, Math.floor(game.distance / 10) + 25);
 });
 
-test('tables and chairs remain jumpable at all difficulty levels', () => {
+test('tables, chairs, ribs and burgers remain jumpable at all difficulty levels', () => {
+  const clearedTypes = new Set();
   for (const width of [560, 960]) {
     for (let seed = 1; seed <= 36; seed++) {
       const game = new LunarRun({ width, seed }); game.start();
@@ -67,12 +68,14 @@ test('tables and chairs remain jumpable at all difficulty levels', () => {
         const next = game.obstacles.find(obstacle => !obstacle.passed);
         if (next && next.x + next.width / 2 - game.playerX < game.speed * JUMP_VELOCITY / GRAVITY && game.elevation === 0) game.jump();
         game.advance(STEP);
+        for (const obstacle of game.obstacles) if (obstacle.passed) clearedTypes.add(obstacle.type);
         assert.notEqual(game.status, 'over', `width=${width}, seed=${seed}, time=${game.time}`);
       }
       assert.equal(game.speed, 440);
       assert.ok(game.cleared > 30);
     }
   }
+  assert.deepEqual(clearedTypes, new Set(['table', 'chair', 'ribs', 'burger']));
 });
 
 test('a new attempt fully resets the previous run', () => {
@@ -106,7 +109,7 @@ test('landing on furniture causes a collision', () => {
   assert.equal(game.cleared, 0);
 });
 
-test('both furniture types appear with matching dimensions', () => {
+test('all four obstacle types appear with matching dimensions', () => {
   const types = new Set();
   for (let seed = 1; seed <= 40; seed++) {
     const game = new LunarRun({ seed }); game.start(); game.nextObstacle = 0;
@@ -115,12 +118,47 @@ test('both furniture types appear with matching dimensions', () => {
     types.add(obstacle.type);
     if (obstacle.type === 'table') {
       assert.equal(obstacle.height, 54); assert.ok(obstacle.width >= 90 && obstacle.width <= 110);
-    } else {
+    } else if (obstacle.type === 'chair') {
       assert.equal(obstacle.height, 72); assert.ok(obstacle.width >= 42 && obstacle.width <= 52);
+    } else if (obstacle.type === 'ribs') {
+      assert.equal(obstacle.height, 38); assert.ok(obstacle.width >= 84 && obstacle.width <= 102);
+    } else if (obstacle.type === 'burger') {
+      assert.equal(obstacle.height, 54); assert.ok(obstacle.width >= 58 && obstacle.width <= 72);
+    } else {
+      assert.fail(`Unexpected obstacle: ${obstacle.type}`);
     }
   }
-  assert.deepEqual(types, new Set(['table', 'chair']));
+  assert.deepEqual(types, new Set(['table', 'chair', 'ribs', 'burger']));
 });
+
+for (const [type, width, height] of [['ribs', 102, 38], ['burger', 72, 54]]) {
+  test(`${type}: a completed jump awards +25 exactly once`, () => {
+    const game = new LunarRun(); game.start(); game.nextObstacle = Infinity;
+    game.obstacles = [{ type, x: game.playerX + 75, width, height, passed: false }];
+    game.jump();
+    // Being above the food is not enough: the bonus arrives after clearing it.
+    for (let i = 0; i < 40; i++) game.advance(STEP);
+    assert.equal(game.cleared, 0);
+    assert.equal(game.score, Math.floor(game.distance / 10));
+    for (let i = 0; i < 320; i++) game.advance(STEP);
+    assert.equal(game.status, 'running');
+    assert.equal(game.cleared, 1);
+    assert.equal(game.score, Math.floor(game.distance / 10) + 25);
+  });
+
+  test(`${type}: running into or landing on food ends the run without a bonus`, () => {
+    for (const landing of [false, true]) {
+      const game = new LunarRun(); game.start(); game.nextObstacle = Infinity;
+      game.elevation = landing ? height + 10 : 0;
+      game.velocity = landing ? -250 : 0;
+      game.obstacles = [{ type, x: game.playerX - 5, width, height, passed: false }];
+      for (let i = 0; i < 20 && game.status === 'running'; i++) game.advance(STEP);
+      assert.equal(game.status, 'over');
+      assert.equal(game.cleared, 0);
+      assert.equal(game.score, Math.floor(game.distance / 10));
+    }
+  });
+}
 
 test('seeded random streams are repeatable and long interruptions are bounded', () => {
   const a = randomFromSeed(123), b = randomFromSeed(123);
