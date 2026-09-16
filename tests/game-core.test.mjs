@@ -59,7 +59,7 @@ test('passed furniture earns its bonus exactly once', () => {
   assert.equal(game.score, Math.floor(game.distance / 10) + 25);
 });
 
-test('tables, chairs, ribs and burgers remain jumpable at all difficulty levels', () => {
+test('all five obstacle types remain jumpable at all difficulty levels', () => {
   const clearedTypes = new Set();
   for (const width of [560, 960]) {
     for (let seed = 1; seed <= 36; seed++) {
@@ -75,17 +75,19 @@ test('tables, chairs, ribs and burgers remain jumpable at all difficulty levels'
       assert.ok(game.cleared > 30);
     }
   }
-  assert.deepEqual(clearedTypes, new Set(['table', 'chair', 'ribs', 'burger']));
+  assert.deepEqual(clearedTypes, new Set(['table', 'chair', 'ribs', 'burger', 'villain']));
 });
 
 test('a new attempt fully resets the previous run', () => {
   const game = new LunarRun(); game.start(); game.advance(0.1); game.jump();
+  game.hitObstacle = 'villain';
   game.reset(2);
   assert.equal(game.status, 'ready');
   assert.equal(game.score, 0);
   assert.equal(game.distance, 0);
   assert.equal(game.elevation, 0);
   assert.equal(game.jumpCount, 0);
+  assert.equal(game.hitObstacle, null);
   assert.deepEqual(game.obstacles, []);
 });
 
@@ -109,7 +111,7 @@ test('landing on furniture causes a collision', () => {
   assert.equal(game.cleared, 0);
 });
 
-test('all four obstacle types appear with matching dimensions', () => {
+test('all five obstacle types appear with matching dimensions', () => {
   const types = new Set();
   for (let seed = 1; seed <= 40; seed++) {
     const game = new LunarRun({ seed }); game.start(); game.nextObstacle = 0;
@@ -124,14 +126,16 @@ test('all four obstacle types appear with matching dimensions', () => {
       assert.equal(obstacle.height, 38); assert.ok(obstacle.width >= 84 && obstacle.width <= 102);
     } else if (obstacle.type === 'burger') {
       assert.equal(obstacle.height, 54); assert.ok(obstacle.width >= 58 && obstacle.width <= 72);
+    } else if (obstacle.type === 'villain') {
+      assert.equal(obstacle.height, 104); assert.ok(obstacle.width >= 80 && obstacle.width <= 88);
     } else {
       assert.fail(`Unexpected obstacle: ${obstacle.type}`);
     }
   }
-  assert.deepEqual(types, new Set(['table', 'chair', 'ribs', 'burger']));
+  assert.deepEqual(types, new Set(['table', 'chair', 'ribs', 'burger', 'villain']));
 });
 
-for (const [type, width, height] of [['ribs', 102, 38], ['burger', 72, 54]]) {
+for (const [type, width, height] of [['ribs', 102, 38], ['burger', 72, 54], ['villain', 88, 104]]) {
   test(`${type}: a completed jump awards +25 exactly once`, () => {
     const game = new LunarRun(); game.start(); game.nextObstacle = Infinity;
     game.obstacles = [{ type, x: game.playerX + 75, width, height, passed: false }];
@@ -146,7 +150,7 @@ for (const [type, width, height] of [['ribs', 102, 38], ['burger', 72, 54]]) {
     assert.equal(game.score, Math.floor(game.distance / 10) + 25);
   });
 
-  test(`${type}: running into or landing on food ends the run without a bonus`, () => {
+  test(`${type}: running into or landing on the obstacle ends the run without a bonus`, () => {
     for (const landing of [false, true]) {
       const game = new LunarRun(); game.start(); game.nextObstacle = Infinity;
       game.elevation = landing ? height + 10 : 0;
@@ -154,6 +158,7 @@ for (const [type, width, height] of [['ribs', 102, 38], ['burger', 72, 54]]) {
       game.obstacles = [{ type, x: game.playerX - 5, width, height, passed: false }];
       for (let i = 0; i < 20 && game.status === 'running'; i++) game.advance(STEP);
       assert.equal(game.status, 'over');
+      assert.equal(game.hitObstacle, type);
       assert.equal(game.cleared, 0);
       assert.equal(game.score, Math.floor(game.distance / 10));
     }

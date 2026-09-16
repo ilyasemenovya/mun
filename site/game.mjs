@@ -1,5 +1,6 @@
-import { LunarRun } from './game-core.mjs?v=20260916-food';
+import { LunarRun } from './game-core.mjs?v=20260916-villain';
 import { drawFood } from './game-food.mjs?v=20260916-food';
+import { drawVillain } from './game-villain.mjs?v=20260916-villain';
 
 const $ = selector => document.querySelector(selector);
 const canvas = $('#canvas');
@@ -72,7 +73,7 @@ async function loadAssets() {
     assets = { waiter, moon, frames, helmet };
     $('#overlay-kicker').textContent = 'На низком старте';
     $('#overlay-title').textContent = 'Луна ждёт.';
-    $('#overlay-description').textContent = 'Официант с пивом на Луне. Перепрыгивайте столы, стулья, рёбра и бургеры — по +25 очков за каждый удачный прыжок.';
+    $('#overlay-description').textContent = 'Перепрыгивайте мебель, рёбра, бургеры и злодея с табличкой «Тутла». Удачный прыжок — +25, столкновение — конец попытки.';
     play.textContent = 'Начать пробежку';
   } catch {
     loadFailed = true;
@@ -159,6 +160,8 @@ function drawObstacle(obstacle) {
     context.fillRect(x, y + 33, width, 3);
     context.fillStyle = '#8e3529';
     context.fillRect(x + 5, GROUND - 16, width - 11, 5);
+  } else if (obstacle.type === 'villain') {
+    drawVillain(context, obstacle, GROUND);
   } else {
     drawFood(context, obstacle, GROUND);
   }
@@ -267,8 +270,9 @@ function finishRun() {
   }
   setPlaying(false);
   $('#overlay-kicker').textContent = isBest ? 'Новый личный рекорд' : 'Это была хорошая пробежка';
-  $('#overlay-title').textContent = 'Ещё один шаг?';
-  $('#overlay-description').textContent = isBest ? 'На этом устройстве вы ещё не забирались так далеко.' : 'Столы, стулья, рёбра и бургеры — перепрыгивайте их и набирайте очки.';
+  const hitVillain = run.hitObstacle === 'villain';
+  $('#overlay-title').textContent = hitVillain ? 'Попались злодею.' : 'Ещё один шаг?';
+  $('#overlay-description').textContent = hitVillain ? 'Злодей с табличкой «Тутла» преградил путь. В следующей попытке перепрыгните его.' : isBest ? 'На этом устройстве вы ещё не забирались так далеко.' : 'Перепрыгивайте мебель, рёбра, бургеры и злодея с табличкой «Тутла» — набирайте очки.';
   $('#run-result').textContent = `${run.score.toLocaleString('ru-RU')} очков`;
   $('#run-result').hidden = false;
   play.textContent = 'Ещё попытка';

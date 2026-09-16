@@ -7,7 +7,8 @@ const OBSTACLES = [
   { type: 'table', minWidth: 90, widthRange: 21, height: 54 },
   { type: 'chair', minWidth: 42, widthRange: 11, height: 72 },
   { type: 'ribs', minWidth: 84, widthRange: 19, height: 38 },
-  { type: 'burger', minWidth: 58, widthRange: 15, height: 54 }
+  { type: 'burger', minWidth: 58, widthRange: 15, height: 54 },
+  { type: 'villain', minWidth: 80, widthRange: 9, height: 104 }
 ];
 
 export function randomFromSeed(seed) {
@@ -34,6 +35,7 @@ export class LunarRun {
     this.distance = 0;
     this.score = 0;
     this.cleared = 0;
+    this.hitObstacle = null;
     this.speed = 260;
     this.elevation = 0;
     this.velocity = 0;
@@ -101,6 +103,7 @@ export class LunarRun {
       const inside = this.playerX + PLAYER_HALF_WIDTH > obstacle.x && this.playerX - PLAYER_HALF_WIDTH < obstacle.x + obstacle.width;
       if (inside && this.elevation < obstacle.height) {
         this.status = 'over';
+        this.hitObstacle = obstacle.type;
         this.accumulator = 0;
         break;
       }
