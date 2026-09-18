@@ -1,0 +1,169 @@
+@font-face{font-family:Oswald;src:url('assets/redesign/Oswald.ttf') format('truetype');font-weight:200 700;font-display:swap}
+/* MUN brand colors are inherited unchanged from styles.css. */
+.redesign{display:flow-root;background:var(--red);color:var(--navy);--display:Oswald,'Arial Narrow',sans-serif}
+.redesign h1,.redesign h2,.redesign h3{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:-.035em;line-height:1.08;overflow-wrap:normal}
+.redesign h2{font-size:clamp(2.8rem,5.5vw,5.7rem)}
+.redesign em{font-style:normal;color:var(--red)}
+.redesign .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.13em}
+.redesign .section{padding:96px max(6%,calc((100% - 1240px)/2))}
+.redesign .header{min-height:84px;margin:24px 32px 0;padding:13px 24px;border:0;border-radius:7px;background:var(--navy);color:var(--paper);gap:24px}
+.redesign .brand img{width:43px;height:49px;object-fit:contain}
+.redesign .header nav{gap:22px}
+.redesign .header nav a{font-size:.82rem;font-weight:600}
+.redesign .header .button{font-size:.94rem}
+.redesign .button{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:1.05rem;letter-spacing:.015em;border-radius:4px;min-height:52px;padding:14px 23px;gap:26px}
+.redesign .button-small{min-height:43px;padding:11px 18px}
+.redesign .button.accent{color:var(--paper)}
+.redesign .text-link{font-weight:700;font-size:.85rem;gap:20px;min-height:44px}
+.redesign a:focus-visible,.redesign button:focus-visible,.redesign summary:focus-visible{outline:3px solid currentColor;outline-offset:5px}
+.icon{display:inline-block;flex:0 0 22px;width:22px;height:22px;background:currentColor;mask:var(--icon) center/contain no-repeat;-webkit-mask:var(--icon) center/contain no-repeat}
+.arrow-up{--icon:url('assets/redesign/arrow-up-right.svg')}.arrow-right{--icon:url('assets/redesign/arrow-right.svg')}.menu-icon{--icon:url('assets/redesign/list.svg')}.close-icon{--icon:url('assets/redesign/x.svg')}.moon-stars{--icon:url('assets/redesign/moon-stars.svg')}.microphone{--icon:url('assets/redesign/microphone-stage.svg')}.fork-knife{--icon:url('assets/redesign/fork-knife.svg')}
+.redesign .nav-toggle{display:none;border-radius:4px;border-color:var(--paper);align-items:center;justify-content:center;padding:9px}
+.redesign .nav-toggle[aria-expanded=true] .menu-icon{--icon:url('assets/redesign/x.svg')}
+.moon-hero{position:relative;text-align:center;color:var(--paper);padding:44px 24px 56px;overflow:hidden}
+.moon-hero:after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:40px;background:var(--paper);mask:url('assets/redesign/scallop-edge.png') left -132px/900px 300px repeat-x;-webkit-mask:url('assets/redesign/scallop-edge.png') left -132px/900px 300px repeat-x;pointer-events:none}
+.moon-hero h1{font-size:clamp(7.7rem,15vw,14rem);line-height:1.12;letter-spacing:-.05em;margin:15px 0 24px}
+.hero-prefix{display:block;font-size:clamp(1.5rem,2.5vw,2.3rem);line-height:1.2;letter-spacing:0;margin-bottom:2px}
+.hero-tagline{font-family:var(--display);font-size:clamp(1rem,1.6vw,1.4rem);font-weight:600;text-transform:uppercase;margin:0;line-height:1.3}
+.hero-art{width:min(820px,80vw);height:auto;margin:24px auto 0}
+.moon-hero-actions{display:flex;justify-content:center;align-items:center;gap:24px;margin-top:-3px;position:relative;z-index:1}
+.hero-menu-link{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:1.05rem;min-height:48px;display:flex;align-items:center;border-bottom:1px solid currentColor}
+.moon-address{display:inline-block;margin:20px 0 0;font-size:.75rem;line-height:1.5}
+.word-band{background:var(--paper);color:var(--navy);overflow:hidden;padding:30px 0 25px;font-family:var(--display);font-size:clamp(2rem,4.1vw,4rem);font-weight:700;line-height:1.3;white-space:nowrap;letter-spacing:-.03em}
+.word-band span{display:block;width:max-content;transform:translateX(-32px)}
+.evening-section{background:var(--paper);display:grid;grid-template-columns:1fr 1fr;gap:7%;align-items:center}
+.redesign .evening-section{padding-top:30px;padding-bottom:88px}
+.evening-art{position:relative;isolation:isolate}
+.evening-art img{position:relative;max-height:590px;width:100%;object-fit:contain}
+.collage-caption{position:absolute;left:-3%;right:-3%;top:37%;font-family:var(--display);font-size:clamp(1.8rem,3.8vw,3.5rem);font-weight:700;letter-spacing:-.035em;text-align:center;color:var(--red);transform:rotate(-8deg);white-space:nowrap}
+.evening-copy .eyebrow{margin-bottom:22px}
+.evening-copy p:not(.eyebrow){max-width:440px;margin:28px 0;font-size:.96rem}
+.room-section{background:var(--paper)}
+.redesign .room-section{padding-top:44px;padding-bottom:110px}
+.title-row{display:flex;align-items:flex-end;justify-content:space-between;gap:36px;margin-bottom:52px}
+.title-row .eyebrow{margin-bottom:20px}
+.title-row>p{font-size:.94rem;max-width:350px;margin:0 0 7px}
+.title-row .text-link{flex-shrink:0;margin-bottom:10px}
+.room-photos{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;align-items:start}
+.photo-print{background:var(--sand);padding:12px 12px 0;transform:rotate(-3deg);transition:transform .2s}
+.photo-print:nth-child(2){transform:rotate(3deg);margin-top:45px}
+.photo-print:nth-child(3){transform:rotate(-2deg);margin-top:10px}
+.photo-print:hover{transform:rotate(0)}
+.photo-print img{width:100%;aspect-ratio:1;object-fit:cover}
+.photo-print>span{font-family:var(--display);font-size:1.25rem;font-weight:600;text-transform:uppercase;display:flex;justify-content:space-between;align-items:center;padding:18px 5px}
+.food-section{background:var(--red);color:var(--paper);text-align:center}
+.food-section h2{margin:18px 0 0}
+.food-section em{color:var(--paper);display:block}
+.food-intro{font-size:.94rem;margin:26px 0 52px}
+.food-section .menu-preview{max-width:990px;margin:0 auto;gap:54px;text-align:left}
+.food-section .menu-feature{border:0;background:var(--navy);color:var(--paper);padding:33px 36px 30px;transform:rotate(-3deg);border-radius:4px;transition:transform .2s}
+.food-section .menu-feature:nth-child(2){background:var(--paper);color:var(--navy);transform:rotate(3deg);margin-top:22px}
+.food-section .menu-feature:hover{transform:rotate(0)}
+.redesign .feature-top h3{font-size:3.8rem}
+.food-section .feature-top .icon{width:36px;height:36px;flex-basis:36px}
+.food-section .preview-dishes>div{border-bottom:1px solid currentColor;font-size:.85rem;padding:16px 0}
+.food-section .preview-dishes{margin-bottom:28px}
+.food-section .feature-link{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:.8rem}
+.category-band{display:flex;justify-content:space-around;gap:45px;overflow:hidden;white-space:nowrap;background:var(--navy);color:var(--paper);padding:17px 24px;border-top:5px solid var(--paper);border-bottom:5px solid var(--red);font-family:var(--display);font-weight:700;transform:none}
+.category-band>span{display:flex;align-items:center;gap:15px;font-size:1.25rem}
+.category-band .icon{color:var(--sand)}
+.redesign .karaoke-section{background:var(--navy);color:var(--paper);grid-template-columns:1fr 1fr;gap:7%;padding-top:90px;padding-bottom:100px}
+.redesign .karaoke-photo{height:auto;padding:12px 12px 0;background:var(--paper);color:var(--navy);transform:rotate(-4deg);margin:0 10px}
+.redesign .karaoke-photo img{width:100%;height:auto;aspect-ratio:1;object-fit:cover}
+.karaoke-photo>span{display:block;text-align:center;font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:1.6rem;padding:17px 10px}
+.redesign .karaoke-copy{padding:0}
+.redesign .karaoke-copy h2{font-size:clamp(2.6rem,4.4vw,4.4rem);margin-top:20px}
+.redesign .karaoke-copy em{color:var(--sand)}
+.redesign .karaoke-copy .section-intro{font-size:.95rem}
+.redesign .karaoke-rules{margin-bottom:28px}
+.redesign .karaoke-rules strong{font-size:.95rem}
+.redesign .afisha-section{background:var(--red);color:var(--paper);border:0;display:block}
+.redesign .afisha-section>.eyebrow{padding:0;margin-bottom:20px}
+.redesign .afisha-content{flex-direction:row;align-items:center}
+.redesign .afisha-content h2{font-size:clamp(3.5rem,7.5vw,7rem)}
+.redesign .afisha-content .section-intro{font-size:.95rem}
+.events-section .events-grid{grid-template-columns:1.15fr 1fr;gap:7%;align-items:center}
+.events-section .event-photo{min-height:0;height:560px}
+.events-section .event-offer{padding:0}
+.redesign .package h3{font-family:var(--display);font-size:3rem;font-weight:600;letter-spacing:-.02em}
+.redesign .package p,.redesign .package>span{font-size:.875rem}
+.moon-game-section{background:var(--navy);color:var(--paper);display:grid;grid-template-columns:1fr 1fr;gap:6%;align-items:center}
+.moon-game-copy h2{margin:22px 0}
+.moon-game-copy em{color:var(--sand)}
+.moon-game-copy p:not(.eyebrow){font-size:.92rem;max-width:440px;margin:24px 0 28px}
+.game-note{display:block;font-size:.7rem;color:var(--sand);max-width:350px;margin-top:16px;line-height:1.7}
+.game-scene{border:12px solid var(--paper);background:var(--paper);color:var(--navy);transform:rotate(4deg)}
+.game-scene img{width:100%;aspect-ratio:1.1;object-fit:cover;object-position:61% center}
+.game-scene>span{display:flex;justify-content:space-between;align-items:center;font-family:var(--display);font-size:3rem;font-weight:700;padding:10px 10px 0}
+.game-scene .icon{height:36px;width:36px;flex-basis:36px}
+.takeaway-section{background:var(--paper);display:grid;grid-template-columns:1.1fr 1fr;gap:8%;align-items:center}
+.takeaway-section h2{margin:22px 0}
+.takeaway-section p{font-size:.95rem;max-width:440px}
+.takeaway-options>a{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:27px 0;border-bottom:2px solid var(--navy)}
+.takeaway-options>a:first-child{border-top:2px solid var(--navy)}
+.takeaway-options small{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;display:block;margin-bottom:10px}
+.takeaway-options strong{font-family:var(--display);font-size:clamp(2rem,3.5vw,3.5rem);font-weight:700;text-transform:uppercase;line-height:1.1}
+.takeaway-options .icon{width:38px;height:38px;flex-basis:38px}
+.takeaway-options p{font-size:.75rem;margin:20px 0 0}
+.redesign .feedback-section{border:0;background:var(--sand);text-align:center}
+.feedback-section h2{margin:22px 0}
+.feedback-section>p:not(.eyebrow){font-size:.95rem}
+.feedback-section .section-actions{justify-content:center}
+.redesign .booking-section{background:var(--red);color:var(--paper)}
+.redesign .booking-section h2{font-size:clamp(3rem,6vw,6rem);margin-top:20px}
+.redesign .booking-section p:not(.eyebrow){font-size:.94rem}
+.redesign footer{background:var(--navy);color:var(--paper);padding-top:58px}
+.footer-brand{display:block;width:66px;margin-bottom:36px}
+.footer-brand img{width:66px;height:auto;filter:brightness(0) invert(95%) sepia(11%) saturate(351%)}
+.redesign .footer-top h2{font-size:clamp(2rem,4vw,3.6rem)}
+.redesign .footer-top{margin-bottom:50px}
+.redesign .contact-phone{font-family:var(--display);font-size:clamp(1.6rem,3.2vw,3rem);font-weight:600}
+.redesign .footer-links,.redesign .footer-bottom{border-color:var(--line)}
+.redesign .footer-links a{min-height:28px}
+.redesign .footer-links .eyebrow{color:var(--sand)}
+.redesign .page-heading h1,.redesign .menu-page-heading h1{font-size:clamp(3.4rem,7vw,7rem);line-height:1.08;letter-spacing:-.035em}
+.redesign:not(.home) main{margin-top:24px}
+.redesign:not(.home) .section:not(.paper){background:var(--navy);color:var(--paper)}
+.redesign .content-split h2{font-size:clamp(2.5rem,4vw,4.2rem)}
+.redesign .service-grid h3{font-size:2.5rem}
+.redesign .menu-switch{gap:14px;max-width:1000px;margin:0 auto 36px;padding-bottom:20px}
+.redesign .menu-switch a{font-family:var(--display);text-transform:uppercase;font-weight:600;border:1px solid var(--navy);padding:11px 26px;font-size:1.4rem;border-radius:4px}
+.redesign .menu-switch a[aria-current=true]{background:var(--navy);color:var(--paper);border-color:var(--navy)}
+.redesign .menu-panel>h2{font-size:2.7rem}
+.redesign .menu-panel summary{font-family:var(--display);text-transform:uppercase;font-size:1.5rem;font-weight:500}
+.redesign .menu-panel summary:after{content:'';width:20px;height:20px;background:currentColor;mask:url('assets/redesign/plus.svg') center/contain no-repeat;-webkit-mask:url('assets/redesign/plus.svg') center/contain no-repeat;flex:0 0 20px}
+.redesign .menu-panel details[open] summary:after{mask-image:url('assets/redesign/minus.svg');-webkit-mask-image:url('assets/redesign/minus.svg')}
+.redesign .dish h3{font-family:Manrope,Arial,sans-serif;text-transform:none;letter-spacing:0;line-height:1.5;font-weight:600}
+.redesign .gallery-item>span{font-family:var(--display);text-transform:uppercase;font-weight:600;font-size:1.4rem}
+.redesign .dialog-inner h2{font-size:2.8rem;line-height:1.13}
+.redesign .dialog-close{display:flex;align-items:center;justify-content:center}
+.redesign .photo-dialog-top h2{font-family:Manrope,Arial,sans-serif;font-size:1rem;letter-spacing:0;text-transform:none}
+@media(min-width:1600px){.redesign .header{max-width:1440px;margin-left:auto;margin-right:auto}}
+@media(max-width:1180px){.redesign .header nav{gap:0;padding:18px 25px;border-radius:0 0 7px 7px}.redesign .header nav a{font-size:1rem;min-height:48px}.redesign .nav-toggle{display:flex}.redesign .header nav.is-open{display:flex}.redesign .section{padding:78px 6%}.hero-art{width:76vw}.redesign .karaoke-section{gap:6%;padding-top:78px;padding-bottom:78px}.redesign .karaoke-copy h2{font-size:3rem}.food-section .menu-preview{gap:35px}.food-section .menu-feature{padding:28px}.events-section .event-photo{height:520px}.events-section .events-grid{gap:5%;grid-template-columns:1fr 1fr}}
+@media(max-width:800px){.redesign .header{margin:16px 18px 0;min-height:76px;padding:12px 18px;gap:18px}.redesign .brand img{width:39px;height:44px}.moon-hero{padding-top:36px}.moon-hero h1{font-size:24vw;margin-top:19px}.hero-prefix{font-size:1.8rem}.hero-art{width:90vw;max-width:none;margin-top:30px}.moon-hero-actions{margin-top:10px}.redesign .evening-section{gap:4%;padding:38px 6% 58px}.evening-art img{max-height:450px}.collage-caption{font-size:3vw}.evening-copy h2{font-size:2.7rem}.evening-copy .eyebrow{font-size:.6rem;margin-bottom:18px}.evening-copy p:not(.eyebrow){font-size:.85rem;margin:22px 0}.evening-copy .button{font-size:.94rem;padding:14px 16px;gap:16px}.redesign .room-section{padding:32px 6% 70px}.title-row{margin-bottom:40px}.title-row h2{font-size:3.5rem}.room-photos{gap:18px}.photo-print{padding:8px 8px 0}.photo-print>span{font-size:.95rem;padding:14px 0}.photo-print>span .icon{width:18px;height:18px;flex-basis:18px}.photo-print:nth-child(2){margin-top:28px}.redesign .section{padding:65px 6%}.redesign .feature-top h3{font-size:3rem}.food-section .menu-preview{gap:28px}.food-section .menu-feature{padding:25px}.food-section .preview-dishes>div{font-size:.8rem;gap:12px}.food-section .feature-link{font-size:.75rem}.redesign .karaoke-section{grid-template-columns:1fr 1fr;gap:6%}.redesign .karaoke-photo{margin:0}.karaoke-photo>span{font-size:1.2rem}.redesign .karaoke-copy h2{font-size:2.5rem}.redesign .karaoke-copy .section-intro{font-size:.85rem}.redesign .karaoke-rules strong{font-size:.85rem}.redesign .karaoke-rules span{font-size:.75rem}.redesign .karaoke-copy .button{font-size:.92rem;gap:14px;padding:14px 16px}.redesign .afisha-content{gap:32px}.redesign .afisha-content h2{font-size:4rem}.events-section .events-grid{grid-template-columns:1fr;gap:35px}.events-section .event-photo{height:420px}.title-row>p{font-size:.85rem}.moon-game-section{gap:5%}.moon-game-copy h2{font-size:3.5rem}.moon-game-copy p:not(.eyebrow){font-size:.85rem}.game-scene{border-width:8px}.game-scene>span{font-size:2.2rem}.takeaway-section{gap:6%;grid-template-columns:1.15fr 1fr}.takeaway-section h2{font-size:3rem}.takeaway-options strong{font-size:2.4rem}.redesign .booking-section h2{font-size:3.4rem}.redesign .page-heading h1,.redesign .menu-page-heading h1{font-size:4.2rem}}
+@media(max-width:600px){.redesign .header{margin:12px 12px 0;padding:12px 14px;gap:10px}.redesign .header-actions{gap:9px}.redesign .header .button{font-size:.85rem;padding:11px 13px;min-height:44px}.redesign .brand img{width:36px;height:41px}.moon-hero{padding:32px 18px 52px}.moon-hero>.eyebrow{font-size:.59rem;letter-spacing:.1em}.moon-hero h1{font-size:27vw;line-height:1.12;margin:23px 0 20px;letter-spacing:-.035em}.hero-prefix{font-size:1.65rem;margin-bottom:3px}.hero-tagline{font-size:1rem}.hero-art{width:calc(100% + 20px);max-width:none;margin:27px -10px 0}.moon-hero-actions{flex-direction:column;gap:8px;margin-top:16px}.moon-hero-actions .button{font-size:1rem;min-height:50px}.hero-menu-link{font-size:.95rem;min-height:40px}.moon-address{margin-top:18px;font-size:.7rem}.word-band{font-size:2.2rem;padding:18px 0 20px}.redesign .section{padding:62px 24px}.redesign .evening-section{grid-template-columns:1fr;padding:4px 24px 60px;gap:12px}.evening-art{max-width:340px;margin:0 auto;width:100%}.evening-art img{max-height:375px}.collage-caption{font-size:1.8rem;left:-4%;right:-4%}.evening-copy{text-align:center}.evening-copy h2{font-size:2.9rem}.evening-copy .eyebrow{font-size:.65rem}.evening-copy p:not(.eyebrow){font-size:.9rem;max-width:370px;margin:25px auto}.evening-copy .button{font-size:1rem}.redesign .room-section{padding:20px 24px 62px}.title-row{display:block;margin-bottom:38px}.title-row h2{font-size:3rem}.title-row .text-link{margin:20px 0 0}.room-photos{grid-template-columns:1fr;gap:36px;max-width:380px;margin:0 auto}.photo-print{padding:10px 10px 0}.photo-print:nth-child(2),.photo-print:nth-child(3){margin:0}.photo-print img{aspect-ratio:1.2}.photo-print>span{font-size:1.25rem;padding:16px 4px}.photo-print>span .icon{width:22px;height:22px;flex-basis:22px}.food-section h2{font-size:3.3rem}.food-intro{font-size:.9rem;margin:22px 0 38px}.food-section .menu-preview{grid-template-columns:1fr;gap:34px;margin:0 7px}.food-section .menu-feature{padding:26px 25px}.food-section .menu-feature:nth-child(2){margin-top:0}.redesign .feature-top h3{font-size:3.5rem}.food-section .preview-dishes>div{font-size:.85rem}.food-section .feature-link{font-size:.8rem}.category-band{justify-content:flex-start;gap:30px;padding:15px 24px}.category-band>span{font-size:1.1rem}.redesign .karaoke-section{grid-template-columns:1fr;padding:60px 24px;gap:44px}.redesign .karaoke-photo{max-width:340px;margin:0 auto;width:calc(100% - 20px)}.karaoke-photo>span{font-size:1.3rem}.redesign .karaoke-copy h2{font-size:3rem}.redesign .karaoke-copy .section-intro{font-size:.9rem}.redesign .karaoke-rules strong{font-size:.94rem}.redesign .karaoke-rules span{font-size:.85rem}.redesign .karaoke-copy .button{font-size:1rem;padding:14px 22px}.redesign .afisha-content{flex-direction:column;align-items:flex-start;gap:26px}.redesign .afisha-content h2{font-size:3.6rem}.redesign .afisha-content .button{width:auto}.events-section .title-row>p{font-size:.9rem;margin:25px 0 0}.events-section .title-row>p br{display:none}.events-section .event-photo{height:330px}.redesign .package h3{font-size:2.8rem}.event-offer .button{font-size:.97rem}.moon-game-section{grid-template-columns:1fr;gap:42px}.moon-game-copy h2{font-size:3.6rem}.moon-game-copy p:not(.eyebrow){font-size:.9rem}.game-scene{margin:0 8px}.game-scene img{aspect-ratio:1.35}.game-scene>span{font-size:2.7rem}.takeaway-section{grid-template-columns:1fr;gap:34px}.takeaway-section h2{font-size:3.1rem}.takeaway-section p{font-size:.9rem}.takeaway-options strong{font-size:2.7rem}.takeaway-options p{font-size:.75rem}.redesign .feedback-section h2{font-size:3.6rem}.feedback-section .section-actions{align-items:center}.redesign .booking-section{flex-direction:column;gap:28px}.redesign .booking-section h2{font-size:3.7rem}.redesign .booking-section>div:last-child{width:100%}.redesign .booking-section .button{max-width:350px}.redesign footer{padding:44px 24px 26px}.footer-brand{margin-bottom:28px}.redesign .footer-top h2{font-size:2.7rem}.redesign .contact-phone{font-size:1.9rem}.redesign .footer-links a{font-size:.82rem;min-height:32px}.redesign .footer-bottom{font-size:.73rem}.redesign:not(.home) main{margin-top:14px}.redesign .page-heading h1,.redesign .menu-page-heading h1{font-size:3.7rem}.redesign .content-split h2{font-size:2.7rem}.redesign .dialog-inner{padding:56px 24px 28px}.redesign .dialog-inner h2{font-size:2.45rem}.redesign .menu-panel summary{font-size:1.3rem}.redesign .menu-page{padding:40px 24px 60px}.redesign .menu-switch a{font-size:1.2rem;padding:11px 22px}.redesign .menu-panel>h2{font-size:2.3rem}.redesign .service-grid h3{font-size:2.3rem}}
+@media(max-width:360px){.redesign .section{padding-left:20px;padding-right:20px}.redesign h2,.redesign .karaoke-copy h2,.evening-copy h2,.takeaway-section h2{font-size:2.6rem}.redesign .header .button{font-size:.8rem;padding:11px 10px}.redesign .header{padding-left:12px;padding-right:12px}.food-section .menu-feature{padding:24px 20px}.redesign .contact-phone{font-size:1.65rem}}
+@media(prefers-reduced-motion:reduce){.redesign *{transition:none!important;scroll-behavior:auto}}
+/* Explicit auto heights keep intrinsic HTML dimensions from stretching cards. */
+.photo-print img,.game-scene img{height:auto}
+.redesign:not(.home) .afisha-content h2{font-size:clamp(2.3rem,5vw,4.5rem)}
+/* White utility text meets AA on the unchanged brand terracotta. */
+.moon-hero>.eyebrow,.hero-tagline,.hero-menu-link,.moon-address,.food-section>.eyebrow,.food-intro,.redesign .afisha-section p,.redesign .booking-section p,.redesign .button.accent{color:#fff}
+.redesign .feedback-section em{color:var(--navy)}
+/* Preserve the newer shared-header change: logo stays centered. */
+.redesign .header{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:16px}
+.redesign .header>.brand{grid-column:2;grid-row:1;justify-self:center}
+.redesign .header>nav{grid-column:1;grid-row:1;justify-content:flex-start;flex-wrap:nowrap;gap:14px}
+.redesign .header nav a{font-size:.75rem;white-space:nowrap}
+.redesign .header>.header-actions{grid-column:3;grid-row:1;justify-self:end}
+@media(max-width:1180px){
+ .redesign .header>.header-actions{display:contents}
+ .redesign .header-actions>.button{grid-column:3;grid-row:1;justify-self:end}
+ .redesign .header-actions>.nav-toggle{grid-column:1;grid-row:1;justify-self:start}
+ .redesign .header>nav{display:none;gap:0;padding:18px 25px}
+ .redesign .header>nav.is-open{display:flex}
+ .redesign .header nav a{font-size:1rem}
+}
+@media(max-width:600px){.redesign .header{gap:8px}.redesign .header .button{font-size:.76rem;padding:11px 9px}}
+@media(max-width:360px){.redesign .header .button{font-size:.69rem;padding:11px 7px}}
+@media(max-width:1180px){.redesign .header>nav{grid-column:auto;grid-row:auto}}
