@@ -75,3 +75,17 @@ h2{color:var(--paper);font-size:clamp(2.4rem,4.5vw,4.1rem)}
 
 .dining-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:7%;align-items:start}.dining-grid>div{border-top:1px solid var(--line);padding-top:27px}.dining-grid h3{font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.2}.dining-grid h3 em{font-style:normal;color:#d8bd83}.dining-grid p{font-size:1rem;max-width:650px}.dining-grid .own-alcohol{margin:22px 0}.anchor-target{display:block;position:relative;top:-24px}
 @media(max-width:700px){.dining-grid{grid-template-columns:1fr;gap:34px}.dining-grid>div{padding-top:23px}.dining-grid h3{font-size:2rem}}
+
+/* Gentle snowfall over the page, with fewer flakes on narrow screens. */
+.hero h1 .title-city{display:block;font-size:clamp(1rem,2vw,1.4rem);font-weight:500;letter-spacing:.2em;line-height:1.5;margin-top:18px;text-transform:uppercase}
+.snowfall{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:8}
+.snowflake{position:absolute;top:-12px;left:var(--x);width:var(--size);height:var(--size);border-radius:50%;background:#fff7ed;opacity:var(--opacity);animation:snow-fall var(--duration) var(--delay) linear infinite}
+@keyframes snow-fall{from{transform:translate3d(0,-12px,0)}to{transform:translate3d(var(--drift),calc(100vh + 24px),0)}}
+.snowfall.is-paused .snowflake{animation-play-state:paused}
+.snowfall[hidden],.snow-toggle[hidden]{display:none}
+.snow-toggle{font:inherit;font-size:.8rem;color:inherit;background:transparent;border:1px solid var(--line);border-radius:20px;padding:8px 14px;cursor:pointer}
+.snow-toggle:focus-visible{outline:2px solid #e3c795;outline-offset:4px}
+@media(max-width:700px){.snowflake:nth-child(n+17){display:none}}
+@media(prefers-reduced-motion:reduce){.snowfall,.snow-toggle{display:none!important}}
+
+.festive-cta-icon{display:inline-block;color:#efd8a3;font-size:1.15em;line-height:1;vertical-align:middle;text-shadow:0 0 8px #efd8a322}
