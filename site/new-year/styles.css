@@ -114,3 +114,6 @@ h2{color:var(--paper);font-size:clamp(2.4rem,4.5vw,4.1rem)}
 .booking-card .caption a{color:#682c32;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:700px){.request-section{grid-template-columns:1fr;gap:28px}.booking-intro{padding-top:0}.booking-card{padding:26px 20px;border-radius:12px}.booking-card .form-grid{grid-template-columns:1fr}.booking-card h2{font-size:1.9rem;margin-bottom:25px}.booking-details summary span{display:block;margin-left:18px}.hall-bottom a{width:100%}.header-link{padding:10px;font-size:.75rem}.booking-lead{font-size:1.8rem}}
 @media(prefers-reduced-motion:reduce){.button,.accent,.header-link,.hall-bottom a{transition:none}}
+
+.header .header-phone{max-width:none;white-space:nowrap;font-size:clamp(.8rem,1.2vw,1rem);padding:12px 16px}.header{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}
+@media(max-width:700px){.header .header-phone{font-size:.7rem;padding:9px 7px;letter-spacing:-.02em}.header .location{font-size:.68rem}.header{grid-template-columns:minmax(0,1fr) auto minmax(0,1.6fr);gap:17px 7px}.header .brand img{width:40px}}
