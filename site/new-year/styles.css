@@ -89,3 +89,28 @@ h2{color:var(--paper);font-size:clamp(2.4rem,4.5vw,4.1rem)}
 @media(prefers-reduced-motion:reduce){.snowfall,.snow-toggle{display:none!important}}
 
 .festive-cta-icon{display:inline-block;color:#efd8a3;font-size:1.15em;line-height:1;vertical-align:middle;text-shadow:0 0 8px #efd8a322}
+
+/* Warm gold calls to action and a quiet ivory booking card. */
+.button,.accent,.header-link,.hall-bottom a{background:#dfc28c;border:1px solid #dfc28c;color:#4a2027;border-radius:8px;justify-content:center;gap:0;text-align:center;font-weight:600;transition:background .18s ease}
+.button:hover,.accent:hover,.header-link:hover,.hall-bottom a:hover{background:#eed7ae;border-color:#eed7ae;color:#4a2027}
+.hall-bottom a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px}
+.request-section{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:start;gap:6%}
+.booking-intro{padding-top:18px}.booking-lead{font-family:Raleway,Arial,sans-serif;font-size:clamp(1.6rem,2.8vw,2.5rem);line-height:1.3;margin:25px 0}
+.booking-intro .section-intro{font-size:1rem}.booking-intro .phone{margin-top:14px}
+.booking-card{min-width:0;padding:38px;background:#f5eddf;color:#4a2027;border:1px solid #e5d5bc;border-radius:16px}
+.booking-card h2{color:#4a2027;font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.15;margin:0 0 30px}
+.booking-card .form-grid{gap:20px 16px}
+.booking-card .form-grid label{color:#54383a;font-size:.85rem;gap:8px}
+.booking-card .form-grid input,.booking-card .form-grid select{color:#4a2027;color-scheme:light;background:#fffbf5;border:1px solid #d9c9b5;border-radius:7px;padding:12px;min-height:50px;font-size:16px}
+.booking-card .form-grid input::placeholder{color:#8a7770}.booking-card .form-grid select option{background:#fffbf5;color:#4a2027}
+.booking-card :is(input,select,summary,button,a):focus-visible{outline:2px solid #8b443e;outline-offset:3px}
+.booking-details{margin-top:24px;border-top:1px solid #d9c9b5;padding-top:20px}
+.booking-details summary{cursor:pointer;font-size:.9rem;font-weight:600;line-height:1.7}
+.booking-details summary span{font-size:.75rem;font-weight:400;color:#806e64;margin-left:8px}
+.booking-details[open] summary{margin-bottom:20px}
+.booking-card .button{margin-top:28px}
+.booking-card .button:disabled{background:#e6d4b3;border-color:#e6d4b3;color:#756050}
+.booking-card .caption{color:#77655b;font-size:.8rem;line-height:1.65}
+.booking-card .caption a{color:#682c32;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:700px){.request-section{grid-template-columns:1fr;gap:28px}.booking-intro{padding-top:0}.booking-card{padding:26px 20px;border-radius:12px}.booking-card .form-grid{grid-template-columns:1fr}.booking-card h2{font-size:1.9rem;margin-bottom:25px}.booking-details summary span{display:block;margin-left:18px}.hall-bottom a{width:100%}.header-link{padding:10px;font-size:.75rem}.booking-lead{font-size:1.8rem}}
+@media(prefers-reduced-motion:reduce){.button,.accent,.header-link,.hall-bottom a{transition:none}}

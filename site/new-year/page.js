@@ -10,9 +10,9 @@ for(const day of dates){
  button.addEventListener('click',()=>{dateSelect.value=dateSelect.value===value?'':value;syncDates();});
 }
 dateSelect.add(new Option('Другая дата — обсудим','other'));
-function syncDates(){for(const button of grid.children)button.setAttribute('aria-pressed',String(button.dataset.date===dateSelect.value));}
+function syncDates(){if(dateSelect.value)document.querySelector('.booking-details').open=true;for(const button of grid.children)button.setAttribute('aria-pressed',String(button.dataset.date===dateSelect.value));}
 dateSelect.addEventListener('change',syncDates);
-for(const link of document.querySelectorAll('[data-hall]'))link.addEventListener('click',()=>{document.querySelector('#hall').value=link.dataset.hall;});
+for(const link of document.querySelectorAll('[data-hall]'))link.addEventListener('click',()=>{document.querySelector('#hall').value=link.dataset.hall;document.querySelector('.booking-details').open=true;});
 document.querySelector('form').addEventListener('submit',event=>event.preventDefault());
 
 const motionPreference=window.matchMedia('(prefers-reduced-motion: reduce)');
