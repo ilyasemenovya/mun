@@ -119,3 +119,7 @@ h2{color:var(--paper);font-size:clamp(2.4rem,4.5vw,4.1rem)}
 @media(max-width:700px){.header .header-phone{font-size:.7rem;padding:9px 7px;letter-spacing:-.02em}.header .location{font-size:.68rem}.header{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:17px 7px}.header .brand img{width:40px}}
 
 @media(max-width:700px){.header .brand{justify-self:center}.header .location{min-width:0}.header nav{width:max-content;max-width:100%;justify-self:center;justify-content:center;gap:clamp(12px,4vw,24px);padding:8px 14px}.header nav a{font-size:clamp(.72rem,3vw,.875rem)}}
+
+/* Section titles without numbered labels or their empty column. */
+.section:not(.dates) .section-heading{grid-template-columns:minmax(0,1fr)}
+@media(max-width:700px){.dates .section-heading{grid-template-columns:minmax(0,1fr) 90px;gap:16px;align-items:center}.dates .dates-aside{grid-column:2;grid-row:1}.dates .section-heading>div:last-child{grid-column:1;grid-row:1}.dates-aside .fire-goat{width:90px;height:110px}.booking-intro{padding-top:0}}
