@@ -47,3 +47,18 @@ updateSnow();
 
 const menuCarousel=document.querySelector('.menu-carousel');
 for(const control of document.querySelectorAll('[data-slide]'))control.addEventListener('click',()=>menuCarousel.scrollBy({left:Number(control.dataset.slide)*(menuCarousel.querySelector('.dish-card').getBoundingClientRect().width+18),behavior:motionPreference.matches?'instant':'smooth'}));
+
+function alignDishCards(){
+ const carousel=document.querySelector('.menu-carousel');
+ if(!carousel)return;
+ const cards=[...carousel.querySelectorAll('.dish-card')];
+ if(!cards.length)return;
+ const titleHeight=Math.ceil(Math.max(...cards.map(card=>card.querySelector('h4').getBoundingClientRect().height)));
+ const categoryHeight=Math.ceil(Math.max(...cards.map(card=>card.querySelector('.dish-category').getBoundingClientRect().height)));
+ carousel.style.setProperty('--dish-title-height',titleHeight+'px');
+ carousel.style.setProperty('--dish-category-height',categoryHeight+'px');
+}
+let dishResizeFrame;
+window.addEventListener('resize',()=>{cancelAnimationFrame(dishResizeFrame);dishResizeFrame=requestAnimationFrame(alignDishCards);});
+alignDishCards();
+if(document.fonts)document.fonts.ready.then(alignDishCards);
