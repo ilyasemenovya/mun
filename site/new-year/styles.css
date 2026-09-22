@@ -145,3 +145,12 @@ h2{color:var(--paper);font-size:clamp(2.4rem,4.5vw,4.1rem)}
 .program-names{font-size:1rem;line-height:1.7;color:#ead3c5;margin:16px 0 0}
 #booking-heading:focus{outline:none}
 @media(max-width:700px){.menu-download .button{width:100%;font-size:.875rem;padding:16px 12px}.program-names{font-size:.9rem}.dates .section-heading{grid-template-columns:minmax(0,1fr)}.dates .dates-aside{grid-column:1;grid-row:2}.dates .section-heading>div:last-child{grid-column:1;grid-row:1}}
+
+/* Existing typeface, a clear title and a separate frame for each future photo. */
+.menu-carousel{align-items:stretch;gap:18px}
+.dish-card{flex:0 0 310px;min-width:0;min-height:0;padding:0;border:0;border-radius:0;background:transparent;display:grid;grid-template-rows:auto minmax(5.6em,1fr) auto;gap:14px;align-content:start}
+.dish-card .dish-category{font-size:.75rem;line-height:1.6;margin:0;color:#dfc28c}
+.dish-card h4{font-family:Raleway,Arial,sans-serif;font-weight:400;font-size:1.3rem;line-height:1.4;letter-spacing:0;text-align:left;margin:0;overflow-wrap:break-word}
+.dish-photo-placeholder{width:100%;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;border:1px solid #dfc28c66;border-radius:8px;background:#542830;color:#d8c5b7}
+.dish-photo-placeholder span{font-family:Manrope,Arial,sans-serif;font-weight:400;font-size:.8rem}
+@media(max-width:700px){.dish-card{flex-basis:85%;min-height:0}.dish-card h4{font-size:1.2rem;line-height:1.45}.dish-card{grid-template-rows:auto minmax(5.8em,1fr) auto;gap:12px}}
