@@ -1,11 +1,16 @@
-const dates=[18,19,23,24,25,26,27,29];
+const dates=[18,19,24,25,26,27];
 const dateSelect=document.querySelector('#date');
 const grid=document.querySelector('.date-grid');
 for(const day of dates){
  const value=`2026-12-${day}`;
  const weekday=new Intl.DateTimeFormat('ru',{weekday:'short',timeZone:'UTC'}).format(new Date(`${value}T12:00:00Z`));
  const button=document.createElement('button');button.type='button';button.dataset.date=value;button.setAttribute('aria-label',`${day} декабря 2026`);button.setAttribute('aria-pressed','false');
- const number=document.createElement('strong');number.textContent=day;const label=document.createElement('span');label.textContent=weekday;button.append(number,label);grid.append(button);
+ const prime=day===25||day===26;
+ const host=day===26?'Марат Ибрагимов':'Артём Чугунов';
+ button.className='event-card';
+ button.innerHTML=`<span class="event-date"><strong>${day}</strong><span>декабря · ${weekday}</span></span><span class="event-host">Ведущий<br><b>${host}</b></span><span class="event-dj">DJ Vaisov</span><span class="event-prices"><span>Комнаты и караоке<b>${prime?'3 800':'3 500'} ₽</b></span><span>Основной зал<b>${prime?'4 300':'4 000'} ₽</b></span></span><span class="event-action">Выбрать дату</span>`;
+ button.setAttribute('aria-label',`${day} декабря, ${host}, DJ Vaisov. Комнаты и караоке ${prime?3800:3500} рублей, основной зал ${prime?4300:4000} рублей на гостя. Выбрать дату`);
+ grid.append(button);
  dateSelect.add(new Option(`${day} декабря`,value));
  button.addEventListener('click',()=>{dateSelect.value=dateSelect.value===value?'':value;syncDates();});
 }
@@ -39,3 +44,6 @@ snowToggle.addEventListener('click',()=>{snowEnabled=!snowEnabled;updateSnow();}
 motionPreference.addEventListener('change',updateSnow);
 document.addEventListener('visibilitychange',updateSnow);
 updateSnow();
+
+const menuCarousel=document.querySelector('.menu-carousel');
+for(const control of document.querySelectorAll('[data-slide]'))control.addEventListener('click',()=>menuCarousel.scrollBy({left:Number(control.dataset.slide)*(menuCarousel.querySelector('.dish-card').getBoundingClientRect().width+18),behavior:motionPreference.matches?'instant':'smooth'}));
