@@ -136,3 +136,12 @@ h2{color:var(--paper);font-size:clamp(2.4rem,4.5vw,4.1rem)}
 .banquet-menu-content{margin-top:55px;min-width:0}.menu-gallery-heading h3{font-size:1.7rem}.menu-gallery-heading p{font-size:.85rem;color:#ead3c5}.menu-carousel{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 0 18px;scrollbar-color:#dfc28c #51252c}.dish-card{flex:0 0 280px;scroll-snap-align:start;min-height:195px;padding:26px;border:1px solid #dfc28c55;border-radius:12px;background:linear-gradient(145deg,#6c3940,#482329);display:flex;flex-direction:column;justify-content:space-between}.dish-category{font-size:.75rem;color:#dfc28c;margin:0 0 22px}.dish-card h4{font-family:Raleway,Arial,sans-serif;font-size:1.35rem;font-weight:500;line-height:1.35;margin:0}.carousel-controls{display:flex;gap:12px;justify-content:flex-end;margin-top:10px}.carousel-controls button{background:transparent;color:#ead3c5;border:1px solid var(--line);padding:10px 18px;border-radius:6px;cursor:pointer}.menu-full{display:grid;grid-template-columns:1fr 1fr;gap:35px 7%;margin-top:40px}.menu-group h3{font-size:1.5rem}.menu-group>p{font-size:.8rem;color:#dfc28c;margin:10px 0 16px}.menu-group ul{padding-left:18px;line-height:1.8;font-size:.9rem}.menu-group li{padding-bottom:8px}
 @media(max-width:900px){.date-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.date-grid{grid-template-columns:1fr}.menu-full{grid-template-columns:1fr;gap:25px}.dish-card{flex-basis:85%;min-height:180px}.dining-grid .button{width:100%;padding-left:15px;padding-right:15px}.early-offer{font-size:.8rem}.date-grid .event-card{padding:24px}.banquet-menu-content{margin-top:40px}}
+
+/* Menu, download and alcohol follow one another without repeated copy. */
+.menu-download{margin-top:28px}.menu-download .button{max-width:100%}
+.alcohol-section>.dining-alcohol{max-width:760px}
+.alcohol-section>.dining-alcohol h3{font-size:clamp(2rem,4vw,3.5rem);line-height:1.15}
+.alcohol-section>.dining-alcohol h3 em{font-style:normal;color:#dfc28c}
+.program-names{font-size:1rem;line-height:1.7;color:#ead3c5;margin:16px 0 0}
+#booking-heading:focus{outline:none}
+@media(max-width:700px){.menu-download .button{width:100%;font-size:.875rem;padding:16px 12px}.program-names{font-size:.9rem}.dates .section-heading{grid-template-columns:minmax(0,1fr)}.dates .dates-aside{grid-column:1;grid-row:2}.dates .section-heading>div:last-child{grid-column:1;grid-row:1}}

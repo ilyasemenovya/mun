@@ -12,7 +12,7 @@ for(const day of dates){
  button.setAttribute('aria-label',`${day} декабря, ${host}, DJ Vaisov. Комнаты и караоке ${prime?3800:3500} рублей, основной зал ${prime?4300:4000} рублей на гостя. Выбрать дату`);
  grid.append(button);
  dateSelect.add(new Option(`${day} декабря`,value));
- button.addEventListener('click',()=>{dateSelect.value=dateSelect.value===value?'':value;syncDates();});
+ button.addEventListener('click',()=>{dateSelect.value=value;syncDates();document.querySelector('#booking-heading').focus({preventScroll:true});document.querySelector('#request').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});});
 }
 dateSelect.add(new Option('Другая дата — обсудим','other'));
 function syncDates(){if(dateSelect.value)document.querySelector('.booking-details').open=true;for(const button of grid.children)button.setAttribute('aria-pressed',String(button.dataset.date===dateSelect.value));}
