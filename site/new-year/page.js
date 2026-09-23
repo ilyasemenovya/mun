@@ -6,7 +6,7 @@ for(const day of dates){
  const weekday=new Intl.DateTimeFormat('ru',{weekday:'short',timeZone:'UTC'}).format(new Date(`${value}T12:00:00Z`));
  const button=document.createElement('button');button.type='button';button.dataset.date=value;button.setAttribute('aria-label',`${day} декабря 2026`);button.setAttribute('aria-pressed','false');
  const prime=day===25||day===26;
- const host=day===26?'Марат Ибрагимов':'Артём Чугунов';
+ const host='Артём Чугунов';
  button.className='event-card';
  button.innerHTML=`<span class="event-date"><strong>${day}</strong><span>декабря · ${weekday}</span></span><span class="event-host">Ведущий<br><b>${host}</b></span><span class="event-dj">DJ Vaisov</span><span class="event-prices"><span>Комнаты и караоке<b>${prime?'3 800':'3 500'} ₽</b></span><span>Основной зал<b>${prime?'4 300':'4 000'} ₽</b></span></span><span class="event-action">Выбрать дату</span>`;
  button.setAttribute('aria-label',`${day} декабря, ${host}, DJ Vaisov. Комнаты и караоке ${prime?3800:3500} рублей, основной зал ${prime?4300:4000} рублей на гостя. Выбрать дату`);
