@@ -19,9 +19,9 @@ const bookingDescription = document.querySelector('#booking-description');
 const bookingCopy = {
  table: ['Договоримся о встрече.', 'Сообщите дату, время и количество гостей. Менеджер проверит наличие мест и подтвердит бронь.'],
  karaoke: ['Планируем караоке.', 'Уточните программу на выбранную дату, время начала и наличие столов. Менеджер поможет спланировать вечер.'],
- event: ['Обсудим ваш повод.', 'Напишите дату, повод и примерное количество гостей. Обсудим размещение, меню и условия мероприятия.'],
- delivery: ['МУН к вашему столу.', 'Сообщите блюда, количество порций, адрес и желаемое время. Сотрудник подтвердит доступные позиции, сумму и возможность доставки.'],
- pickup: ['Забрать в МУН.', 'Сообщите блюда, количество порций и удобное время. Сотрудник подтвердит сумму и время готовности. Адрес самовывоза: Льва Толстого, 3, 3 этаж.']
+ event: ['Обсудим ваш повод.', 'Напишите дату, повод, примерное количество гостей и желаемую зону. Обсудим размещение, меню и условия мероприятия.'],
+ delivery: ['«По рукам» к вашему столу.', 'Доставка пока не запущена. Команда подскажет доступные варианты заказа с собой.'],
+ pickup: ['Забрать в «По рукам».', 'Уточните доступные блюда, возможность самовывоза и удобное время. Сотрудник подтвердит сумму и готовность заказа. Адрес самовывоза: Льва Толстого, 3, 3 этаж.']
 };
 document.querySelectorAll('[data-booking]').forEach(link => link.addEventListener('click', event => {
  if (!bookingDialog || typeof bookingDialog.showModal !== 'function') return;
@@ -29,7 +29,7 @@ document.querySelectorAll('[data-booking]').forEach(link => link.addEventListene
  const [title, description] = bookingCopy[link.dataset.booking] || bookingCopy.table;
  bookingTitle.textContent = title; bookingDescription.textContent = description;
  const isOrder = ['delivery', 'pickup'].includes(link.dataset.booking);
- bookingDialog.querySelector('.eyebrow').textContent = isOrder ? 'МУН / Заказ с собой' : 'МУН / Бронирование';
+ bookingDialog.querySelector('.eyebrow').textContent = isOrder ? '«По рукам» / Заказ с собой' : '«По рукам» / Бронирование';
  bookingDialog.querySelector('.dialog-note').textContent = isOrder ? 'Заказ принят только после подтверждения сотрудником.' : 'Бронь действует после подтверждения менеджером.';
  closeNavigation(); bookingDialog.showModal(); document.body.classList.add('modal-open');
 }));

@@ -53,7 +53,7 @@ async function loadAssets() {
   loading = true;
   loadFailed = false;
   play.disabled = true;
-  play.textContent = 'Загружаем Луну…';
+  play.textContent = 'Открываем бар…';
   try {
     if (!context) throw new Error('Canvas unavailable');
     const frameRequest = new AbortController();
@@ -62,23 +62,22 @@ async function loadAssets() {
       if (!response.ok) throw new Error('Frames unavailable');
       return response.json();
     }).finally(() => clearTimeout(frameTimeout));
-    const [waiter, moon, frames, helmet] = await Promise.all([
+    const [waiter, interior, frames] = await Promise.all([
       imageAt('assets/game/waiter.png'),
-      imageAt('assets/game/moon.png'),
-      framesPromise,
-      imageAt('assets/game/helmet.png')
+      imageAt('assets/game/bar-interior.png'),
+      framesPromise
     ]);
     if (!Array.isArray(frames) || frames.length !== 4) throw new Error('Invalid frames');
     if (frames.some(frame => ![frame.x, frame.y, frame.width, frame.height, frame.pivotX].every(Number.isFinite) || frame.x < 0 || frame.y < 0 || frame.width <= 0 || frame.height <= 0 || frame.pivotX < 0 || frame.pivotX > frame.width || frame.x + frame.width > waiter.width || frame.y + frame.height > waiter.height)) throw new Error('Invalid sprite bounds');
-    assets = { waiter, moon, frames, helmet };
+    assets = { waiter, interior, frames };
     $('#overlay-kicker').textContent = 'На низком старте';
-    $('#overlay-title').textContent = 'Луна ждёт.';
+    $('#overlay-title').textContent = 'Поднос в руки.';
     $('#overlay-description').textContent = 'Перепрыгивайте мебель, рёбра, бургеры и злодея с табличкой «Тутла». Удачный прыжок — +25, столкновение — конец попытки.';
     play.textContent = 'Начать пробежку';
   } catch {
     loadFailed = true;
     $('#overlay-kicker').textContent = 'Нужна ещё попытка';
-    $('#overlay-title').textContent = 'Луна не загрузилась.';
+    $('#overlay-title').textContent = 'Бар не загрузился.';
     $('#overlay-description').textContent = 'Проверьте подключение к интернету и повторите загрузку.';
     play.textContent = 'Повторить загрузку';
   } finally {
@@ -106,17 +105,17 @@ function resize() {
 }
 
 function drawBackground() {
-  const { moon } = assets;
-  const scale = Math.max(run.width / moon.width, HEIGHT / moon.height);
+  const { interior } = assets;
+  const scale = Math.max(run.width / interior.width, HEIGHT / interior.height);
   const sourceWidth = run.width / scale;
   const sourceHeight = HEIGHT / scale;
-  context.drawImage(moon, (moon.width - sourceWidth) * 0.45, 0, sourceWidth, sourceHeight, 0, 0, run.width, HEIGHT);
+  context.drawImage(interior, (interior.width - sourceWidth) * 0.45, 0, sourceWidth, sourceHeight, 0, 0, run.width, HEIGHT);
   const tileWidth = 770;
   const scroll = reducedMotion ? 0 : run.distance % tileWidth;
   for (let x = -scroll; x < run.width; x += tileWidth) {
-    context.drawImage(moon, 0, moon.height * 0.83, moon.width, moon.height * 0.17, x, GROUND, tileWidth, HEIGHT - GROUND);
+    context.drawImage(interior, 0, interior.height * 0.83, interior.width, interior.height * 0.17, x, GROUND, tileWidth, HEIGHT - GROUND);
   }
-  context.fillStyle = '#d9d0bf';
+  context.fillStyle = '#d3c1ae';
   context.fillRect(0, GROUND, run.width, 3);
 }
 
@@ -193,8 +192,6 @@ function drawWaiter() {
   if (run.status === 'over') context.rotate(0.22);
   const bodyOffset = source.pivotX / source.height * height;
   context.drawImage(assets.waiter, source.x, source.y, source.width, source.height, -bodyOffset, -height / 2, width, height);
-  // Keep the original waiter intact; the transparent visor reveals his face.
-  context.drawImage(assets.helmet, 120, 106, 1027, 1051, -20, -height / 2 - 3, 42, 43);
   context.restore();
   if (!reducedMotion && run.time - clearAt < 0.65 && run.status === 'running') {
     const progress = (run.time - clearAt) / 0.65;
