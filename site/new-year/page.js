@@ -8,8 +8,8 @@ for(const day of dates){
  const prime=day===25||day===26;
  const host='Артём Чугунов';
  button.className='event-card';
- button.innerHTML=`<span class="event-date"><strong>${day}</strong><span>декабря · ${weekday}</span></span><span class="event-host">Ведущий<br><b>${host}</b></span><span class="event-dj">DJ Vaisov</span><span class="event-prices"><span>Меню 3 500 ₽<b>${prime?'3 800':'3 500'} ₽</b></span><span>Меню 4 000 ₽<b>${prime?'4 300':'4 000'} ₽</b></span></span><span class="event-action">Выбрать дату</span>`;
- button.setAttribute('aria-label',`${day} декабря, ${host}, DJ Vaisov. Первое меню ${prime?3800:3500} рублей, второе меню ${prime?4300:4000} рублей на гостя. Выбрать дату`);
+ button.innerHTML=`<span class="event-date"><strong>${day}</strong><span>декабря · ${weekday}</span></span><span class="event-host">Ведущий<br><b>${host}</b></span><span class="event-dj">DJ Vaisov</span><span class="event-prices"><span><b>от ${prime?'3 800':'3 500'} ₽</b><span>на гостя</span></span></span><span class="event-action">Выбрать дату</span>`;
+ button.setAttribute('aria-label',`${day} декабря, ${host}, DJ Vaisov. От ${prime?3800:3500} рублей на гостя. Выбрать дату`);
  grid.append(button);
  dateSelect.add(new Option(`${day} декабря`,value));
  button.addEventListener('click',()=>{dateSelect.value=value;syncDates();document.querySelector('#booking-heading').focus({preventScroll:true});document.querySelector('#request').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});});
