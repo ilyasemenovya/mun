@@ -160,3 +160,13 @@ h2{color:var(--paper);font-size:clamp(2.4rem,4.5vw,4.1rem)}
 .menu-carousel .dish-card h4,.menu-carousel .dish-category{align-self:start}
 .menu-carousel .dish-photo-placeholder{align-self:start;flex:none;height:auto;aspect-ratio:4/3;overflow:hidden}
 .dish-photo-placeholder img{width:100%;height:100%;object-fit:cover}
+
+
+/* Two banquet menus with shared-platter quantities and dish photography. */
+.hall-price strong{font:500 1.8rem Raleway,Arial,sans-serif;color:#dfc28c}.hall-price small{font:400 .85rem Manrope,Arial,sans-serif}.karaoke-summary .hall-price{margin-top:24px}
+.menu-switch,.menu-categories{display:flex;flex-wrap:wrap;gap:12px}.menu-switch button,.menu-categories button{font:inherit;cursor:pointer;border:1px solid #dfc28c66;color:#f5eddf;background:transparent;border-radius:8px;padding:14px 24px}.menu-switch button{font-size:1.15rem}.menu-switch button[aria-pressed=true]{background:#dfc28c;color:#4a2027;border-color:#dfc28c}.menu-categories{margin:28px 0 16px;gap:8px}.menu-categories button{padding:10px 16px;font-size:.9rem;border-radius:24px}.menu-categories button[aria-pressed=true]{background:#f5eddf;color:#4a2027;border-color:#f5eddf}.menu-rate,.menu-serving{font-size:.9rem;line-height:1.6;color:#ead3c5}.menu-rate{margin-top:14px}.menu-serving{min-height:1.6em;margin-bottom:22px}.menu-extras{font-size:1rem;line-height:1.8;margin-top:26px}.menu-extras span{font-size:.8rem;color:#d8c5b7}
+.menu-carousel .dish-card{grid-template-rows:var(--dish-title-height,6em) 1.5em auto;gap:12px}.dish-weight{margin:0;font-size:.9rem;color:#dfc28c;line-height:1.5}.menu-carousel .dish-photo-placeholder{aspect-ratio:3/2}.dish-photo-placeholder img{display:block;object-fit:contain}.booking-deposit{font-size:.8rem;line-height:1.65;color:#77655b;margin:18px 0 0}.field-optional{font-weight:400;font-size:.75rem;color:#806e64}.menu-switch button:focus-visible,.menu-categories button:focus-visible{outline:2px solid #dfc28c;outline-offset:4px}
+@media(max-width:700px){.menu-switch{gap:8px}.menu-switch button{flex:1;padding:13px 10px;font-size:1rem}.menu-categories{gap:8px}.menu-categories button{font-size:.8rem;padding:10px 13px}.menu-carousel .dish-card{flex-basis:86%}.menu-serving{font-size:.85rem}.menu-extras{font-size:.9rem}.hall-price strong{font-size:1.65rem}}
+.menu-carousel .dish-card{grid-template-columns:minmax(0,1fr)}
+.menu-carousel .dish-photo-placeholder{position:relative;width:100%;min-width:100%;aspect-ratio:3/2}
+.menu-carousel .dish-photo-placeholder img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
